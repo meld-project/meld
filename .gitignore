@@ -1,0 +1,10 @@
+__pycache__
+src/cache_features
+wandb_runs
+wandb_cache
+src/experiments/results
+src/hf_modules
+cache_features
+experiments/results
+hf_modules
+*.csv
