@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+torch
+transformers
+tqdm
+PyYAML
+matplotlib
+optuna
+wandb
+orjson
