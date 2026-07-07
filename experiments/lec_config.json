@@ -1,0 +1,17 @@
+{
+  "model_dir": "$MELD_QWEN_MODEL_DIR",
+  "md_dir": "$MELD_MD_DIR",
+  "split_mode": "cv",
+  "n_splits": 5,
+  "clf": "logreg",
+  "max_tokens": 1024,
+  "stride": 256,
+  "seed": 42,
+  "use_wandb": true,
+  "wandb_project": "malware-detection-lec",
+  "wandb_api_key": null,
+  "progress": true,
+  "cache_dir": "./cache/features",
+  "run_tag": "malwaredrift-v1",
+  "out": "./experiments/results/results.json"
+}

@@ -1,0 +1,196 @@
+{
+  "output_dir": "../results/nebula_external_core",
+  "summary_path": "../results/nebula_external_core/summary.json",
+  "runs": [
+    {
+      "name": "nebula_time_ood",
+      "runner": "nebula_baseline",
+      "notes": "Official Nebula pretrained inference under the current asymmetric Time-OOD protocol.",
+      "params": {
+        "split_mode": "time_ood",
+        "malicious_manifest_path": "$MELD_TIMEOOD_MAL_MANIFEST",
+        "benign_manifest_path": "$MELD_TIMEOOD_BEN_MANIFEST",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "benign_split_strategy": "random",
+        "train_end_date": "2025-04-23 08:08:46",
+        "val_end_date": "2025-06-14 11:39:39",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "seeds": [40, 41, 42],
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_time_ood.json"
+      }
+    },
+    {
+      "name": "nebula_time_ood_fpr001",
+      "runner": "nebula_baseline",
+      "notes": "Same protocol as the main Time-OOD run, but calibrated at 0.1% FPR.",
+      "params": {
+        "split_mode": "time_ood",
+        "malicious_manifest_path": "$MELD_TIMEOOD_MAL_MANIFEST",
+        "benign_manifest_path": "$MELD_TIMEOOD_BEN_MANIFEST",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "benign_split_strategy": "random",
+        "train_end_date": "2025-04-23 08:08:46",
+        "val_end_date": "2025-06-14 11:39:39",
+        "target_fpr": 0.001,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "seeds": [40, 41, 42],
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_time_ood_fpr001.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_lummastealer",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_lummastealer",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_lummastealer.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_formbook",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_formbook",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_formbook.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_snakekeylogger",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_snakekeylogger",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_snakekeylogger.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_agenttesla",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_agenttesla",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_agenttesla.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_asyncrat",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_asyncrat",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_asyncrat.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_masslogger",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_masslogger",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_masslogger.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_stealc",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_stealc",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_stealc.json"
+      }
+    },
+    {
+      "name": "nebula_family_lofo_remcosrat",
+      "runner": "nebula_baseline",
+      "params": {
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_remcosrat",
+        "mal_dir": "$MELD_NEBULA_MAL_JSON_DIR",
+        "benign_dir": "$MELD_NEBULA_BEN_JSON_DIR",
+        "target_fpr": 0.01,
+        "tokenizer": "bpe",
+        "seq_len": 512,
+        "device": "cuda:0",
+        "batch_size": 64,
+        "progress": false,
+        "out": "../results/nebula_external_core/nebula_family_lofo_remcosrat.json"
+      }
+    }
+  ]
+}

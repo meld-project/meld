@@ -1,0 +1,566 @@
+{
+  "output_dir": "../results/family_ood_core",
+  "summary_path": "../results/family_ood_core/summary.json",
+  "runs": [
+    {
+      "name": "lec_family_l15_lofo_lummastealer",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_lummastealer",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_lummastealer.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_lummastealer",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_lummastealer",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_lummastealer.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_lummastealer",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_lummastealer",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_lummastealer.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_lummastealer",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_lummastealer",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_lummastealer.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_formbook",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_formbook",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_formbook.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_formbook",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_formbook",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_formbook.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_formbook",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_formbook",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_formbook.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_formbook",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_formbook",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_formbook.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_snakekeylogger",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_snakekeylogger",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_snakekeylogger.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_snakekeylogger",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_snakekeylogger",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_snakekeylogger.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_snakekeylogger",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_snakekeylogger",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_snakekeylogger.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_snakekeylogger",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_snakekeylogger",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_snakekeylogger.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_agenttesla",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_agenttesla",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_agenttesla.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_agenttesla",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_agenttesla",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_agenttesla.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_agenttesla",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_agenttesla",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_agenttesla.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_agenttesla",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_agenttesla",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_agenttesla.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_asyncrat",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_asyncrat",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_asyncrat.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_asyncrat",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_asyncrat",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_asyncrat.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_asyncrat",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_asyncrat",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_asyncrat.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_asyncrat",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_asyncrat",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_asyncrat.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_masslogger",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_masslogger",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_masslogger.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_masslogger",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_masslogger",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_masslogger.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_masslogger",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_masslogger",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_masslogger.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_masslogger",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_masslogger",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_masslogger.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_stealc",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_stealc",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_stealc.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_stealc",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_stealc",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_stealc.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_stealc",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_stealc",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_stealc.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_stealc",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_stealc",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_stealc.json"
+      }
+    },
+    {
+      "name": "lec_family_l15_lofo_remcosrat",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_remcosrat",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [15],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_l15_lofo_remcosrat.json"
+      }
+    },
+    {
+      "name": "lec_family_last_lofo_remcosrat",
+      "runner": "lec",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_remcosrat",
+        "clf": "logreg",
+        "max_tokens": 1024,
+        "stride": 256,
+        "target_fpr": 0.01,
+        "selection_strategy": "tpr_id",
+        "layer_pooling": "single",
+        "candidate_layers": [-1],
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "cache_dir": "../results/family_ood_core/cache/qwen3_full",
+        "out": "../results/family_ood_core/lec_family_last_lofo_remcosrat.json"
+      }
+    },
+    {
+      "name": "text_tfidf_word_lofo_remcosrat",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_word",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_remcosrat",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_word_lofo_remcosrat.json"
+      }
+    },
+    {
+      "name": "text_tfidf_char_lofo_remcosrat",
+      "runner": "text_baseline",
+      "params": {
+        "encoder": "tfidf_char",
+        "split_mode": "split_spec",
+        "split_spec_path": "$MELD_FAMILYOOD_SPLIT_SPEC",
+        "split_name": "lofo_remcosrat",
+        "target_fpr": 0.01,
+        "seeds": [40, 41, 42],
+        "progress": true,
+        "out": "../results/family_ood_core/text_tfidf_char_lofo_remcosrat.json"
+      }
+    }
+  ]
+}

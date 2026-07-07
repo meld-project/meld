@@ -1,0 +1,125 @@
+{
+  "output_dir": "./experiments/results",
+  "runs": [
+    {
+      "name": "lec-experiment-1",
+      "runner": "lec",
+      "enabled": true,
+      "notes": "LEC 交叉验证实验",
+      "params": {
+        "model_dir": "$MELD_QWEN_MODEL_DIR",
+        "split_mode": "cv",
+        "md_dir": "$MELD_MD_DIR",
+        "use_wandb": true,
+        "wandb_project": "lec-experiments",
+        "wandb_entity": null,
+        "wandb_api_key": null,
+        "clf": "logreg",
+        "val_ratio": 0.1,
+        "test_ratio": 0.2,
+        "n_splits": 5,
+        "seed": 42,
+        "run_tag": "experiment-1",
+        "progress": true,
+        "save_raw": false,
+        "cache_dir": "./cache",
+        "until_layer": 15,
+        "max_tokens": 128,
+        "stride": 96,
+        "target_fpr": 0.01,
+        "gpu": 0,
+        "limit": 1000
+      }
+    },
+    {
+      "name": "text-baseline-tfidf-word",
+      "runner": "text_baseline",
+      "enabled": true,
+      "notes": "TF-IDF Word 基线",
+      "params": {
+        "md_dir": "$MELD_MD_DIR",
+        "encoder": "tfidf_word",
+        "split_mode": "cv",
+        "n_splits": 5,
+        "seed": 42,
+        "target_fpr": 0.01,
+        "limit": 1000,
+        "progress": true,
+        "use_wandb": true,
+        "wandb_project": "lec-experiments",
+        "wandb_entity": null,
+        "wandb_api_key": null,
+        "run_tag": "experiment-1"
+      }
+    },
+    {
+      "name": "text-baseline-tfidf-char",
+      "runner": "text_baseline",
+      "enabled": true,
+      "notes": "TF-IDF Char 基线",
+      "params": {
+        "md_dir": "$MELD_MD_DIR",
+        "encoder": "tfidf_char",
+        "split_mode": "cv",
+        "n_splits": 5,
+        "seed": 42,
+        "target_fpr": 0.01,
+        "limit": 1000,
+        "progress": true,
+        "use_wandb": true,
+        "wandb_project": "lec-experiments",
+        "wandb_entity": null,
+        "wandb_api_key": null,
+        "run_tag": "experiment-1"
+      }
+    },
+    {
+      "name": "embedding-baseline-bert",
+      "runner": "embedding_baseline",
+      "enabled": true,
+      "notes": "BERT 嵌入基线",
+      "params": {
+        "md_dir": "$MELD_MD_DIR",
+        "encoder": "bert",
+        "model_name": "bert-base-uncased",
+        "split_mode": "cv",
+        "n_splits": 5,
+        "seed": 42,
+        "target_fpr": 0.01,
+        "limit": 1000,
+        "max_length": 512,
+        "batch_size": 8,
+        "use_wandb": true,
+        "wandb_project": "lec-experiments",
+        "wandb_entity": null,
+        "wandb_api_key": null,
+        "run_tag": "experiment-1"
+      }
+    },
+    {
+      "name": "embedding-baseline-bert-layerwise",
+      "runner": "embedding_baseline",
+      "enabled": true,
+      "notes": "BERT 分层基线（类似 LEC）- 测试可视化",
+      "params": {
+        "md_dir": "$MELD_MD_DIR",
+        "encoder": "bert",
+        "model_name": "bert-base-uncased",
+        "split_mode": "cv",
+        "n_splits": 5,
+        "seed": 42,
+        "target_fpr": 0.01,
+        "limit": 500,
+        "max_length": 512,
+        "batch_size": 8,
+        "layerwise": true,
+        "until_layer": null,
+        "use_wandb": true,
+        "wandb_project": "lec-experiments",
+        "wandb_entity": null,
+        "wandb_api_key": null,
+        "run_tag": "viz-test"
+      }
+    }
+  ]
+}

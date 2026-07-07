@@ -1,0 +1,91 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local/editor metadata
+agents.md
+.vscode/
+.idea/
+
+# Large model files and local model caches
+*.bin
+*.safetensors
+*.gguf
+models/
+
+# Runtime and package caches
+cache/
+wandb/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+src/cache_features/
+src/hf_modules/
+src/wandb_cache/
+src/wandb_runs/
+src/wandb_config/
+src/**/target/
+src/nebula/
+src/src/
+target/
+third_party/
+zotero-mcp/
+
+# Data, model outputs, and experiment artifacts
+data/
+yangben/
+outputs/
+output/
+experiments/results/
+experiments/datasets/
+experiments/data/
+src/experiments/results/
+
+# Logs and generated reports
+*.log
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+
+# Local manuscript/revision workspaces. These are kept out of the public
+# artifact branch; source paper files can be published from a dedicated branch.
+cjc/
+cjc_v2/
+latex/
+meld2.0_latex/
+meld_ew2026/
+paper/
+papers/
+notes/
+latex_structure_*.md
+*.doc
+*.docx
+*.pdf
+*.zip
+setting.json
+tasks.md
+done.md
+test_md_dir_config.json
+compare_all_results.py
+compare_threshold_methods.py
+scripts/convert_paper_pdfs.py
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+word/
+word.zip
